@@ -1,0 +1,24 @@
+# type Patiname {
+#   name: String!
+#   age: Int!
+# }
+
+# type Query {
+#   parson: Patiname!
+# }
+
+type Foods {
+  id: Int!
+  name: String!
+  side: String!
+}
+
+type Query {
+  menu: [Foods]!
+  getMenu(id: Int!): Foods!
+}
+
+type Mutation {
+  rmFood(id: Int!): Boolean!
+  addFood(name: String!, side: String!): Boolean!
+}
